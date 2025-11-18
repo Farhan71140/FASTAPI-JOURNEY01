@@ -1,0 +1,1 @@
+# FASTAPI project (empty main)
