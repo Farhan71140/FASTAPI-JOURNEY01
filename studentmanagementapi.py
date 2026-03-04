@@ -21,7 +21,7 @@ students_db = {
 
 # CREATE (POST)
 @app.post("/students/")
-async def create_student(student: Student):
+async def create_student(student: Student): #- Asynchronous functions allow your program to handle multiple requests at the same time without blocking.
     if student.id in students_db:
         raise HTTPException(status_code=400, detail="Student with this ID already exists")
     students_db[student.id] = student
